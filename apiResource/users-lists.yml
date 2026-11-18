@@ -1,0 +1,44 @@
+info:
+  name: users-lists
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: https://sanitriver-backend.ddev.site/api/admin/users
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 401-example
+    request:
+      url: https://sanitriver-backend.ddev.site/api/admin/users
+      method: GET
+    response:
+      status: 401
+      statusText: Unauthorized
+      headers:
+        - name: cache-control
+          value: no-cache, private
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: date
+          value: Wed, 18 Nov 2026 15:43:13 GMT
+        - name: server
+          value: nginx
+        - name: vary
+          value: Origin
+        - name: transfer-encoding
+          value: chunked
+      body:
+        type: json
+        data: |-
+          {
+            "message": "Unauthenticated."
+          }

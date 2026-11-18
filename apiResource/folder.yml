@@ -1,0 +1,11 @@
+info:
+  name: apiResource
+  type: folder
+  seq: 2
+  tags:
+    - Working
+    - Waiting for refactor
+    - Pending
+
+request:
+  auth: inherit

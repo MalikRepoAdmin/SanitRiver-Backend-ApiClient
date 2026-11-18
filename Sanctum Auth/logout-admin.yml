@@ -1,0 +1,82 @@
+info:
+  name: logout-admin
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: https://sanitriver-backend.ddev.site/api/auth/logout-admin
+  headers:
+    - name: Accept
+      value: application/json
+  auth:
+    type: bearer
+    token: 11|RVn31hg6Uo80AxfMJOHCrXF2SJ2CIBTUywy0kuP294e9abf0
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 401-example
+    request:
+      url: https://sanitriver-backend.ddev.site/api/auth/logout-admin
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 401
+      statusText: Unauthorized
+      headers:
+        - name: cache-control
+          value: no-cache, private
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: date
+          value: Wed, 18 Nov 2026 15:37:02 GMT
+        - name: server
+          value: nginx
+        - name: vary
+          value: Origin
+        - name: transfer-encoding
+          value: chunked
+      body:
+        type: json
+        data: |-
+          {
+            "message": "Unauthenticated."
+          }
+  - name: 200-example
+    request:
+      url: https://sanitriver-backend.ddev.site/api/auth/logout-admin
+      method: POST
+      headers:
+        - name: Accept
+          value: application/json
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: cache-control
+          value: no-cache, private
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: date
+          value: Wed, 18 Nov 2026 15:37:41 GMT
+        - name: server
+          value: nginx
+        - name: vary
+          value: Accept-Encoding, Origin
+        - name: transfer-encoding
+          value: chunked
+      body:
+        type: json
+        data: |-
+          {
+            "status": true,
+            "message": "Anda berhasil logout."
+          }

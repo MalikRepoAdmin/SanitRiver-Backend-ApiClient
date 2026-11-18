@@ -1,0 +1,49 @@
+info:
+  name: dashboard-user
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: https://sanitriver-backend.ddev.site/api/dashboard-user
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200-example
+    request:
+      url: https://sanitriver-backend.ddev.site/api/dashboard-user
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: cache-control
+          value: no-cache, private
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: date
+          value: Wed, 18 Nov 2026 15:42:13 GMT
+        - name: server
+          value: nginx
+        - name: vary
+          value: Accept-Encoding, Origin
+        - name: transfer-encoding
+          value: chunked
+      body:
+        type: json
+        data: |-
+          {
+            "status": true,
+            "message": "Statistik ringkasan dashboard berhasil dimuat.",
+            "data": {
+              "total_sungai": 1243,
+              "total_laporan": 20
+            }
+          }

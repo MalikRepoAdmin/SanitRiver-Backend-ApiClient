@@ -1,0 +1,10 @@
+info:
+  name: Basic CRUD
+  type: folder
+  seq: 6
+  tags:
+    - Pending
+    - Likely Works
+
+request:
+  auth: inherit

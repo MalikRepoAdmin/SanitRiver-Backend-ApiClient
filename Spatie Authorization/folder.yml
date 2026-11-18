@@ -1,0 +1,9 @@
+info:
+  name: Spatie Authorization
+  type: folder
+  seq: 5
+  tags:
+    - Pending
+
+request:
+  auth: inherit

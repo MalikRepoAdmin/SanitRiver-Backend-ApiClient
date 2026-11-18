@@ -1,0 +1,106 @@
+info:
+  name: laporan-sungais-search
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: https://sanitriver-backend.ddev.site/api/laporan-sungais/search?search=bay
+  params:
+    - name: search
+      value: bay
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200-example
+    request:
+      url: https://sanitriver-backend.ddev.site/api/laporan-sungais/search?search=bay
+      method: GET
+      params:
+        - name: search
+          value: bay
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: cache-control
+          value: no-cache, private
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: date
+          value: Wed, 18 Nov 2026 15:41:19 GMT
+        - name: server
+          value: nginx
+        - name: vary
+          value: Accept-Encoding, Origin
+        - name: transfer-encoding
+          value: chunked
+      body:
+        type: json
+        data: |-
+          {
+            "status": true,
+            "message": "Hasil pencarian laporan dengan kata kunci 'bay' berhasil dimuat.",
+            "data": {
+              "current_page": 1,
+              "data": [
+                {
+                  "laporansungai_id": 18,
+                  "user_id": 2,
+                  "sungai_id": 18,
+                  "status": "Cukup Bersih",
+                  "created_at": "2026-11-11T21:37:28.000000Z",
+                  "updated_at": "2026-11-11T21:37:28.000000Z",
+                  "sungai": {
+                    "sungai_id": 18,
+                    "nama_sungai": "Bendung Gerak Sembayat",
+                    "alamat": "Indonesia",
+                    "status": "Belum Terlapor",
+                    "tipe_sungai": "weir",
+                    "created_at": "2026-11-12T02:07:16.000000Z",
+                    "updated_at": "2026-11-12T02:07:16.000000Z"
+                  },
+                  "gambar_sungais": []
+                }
+              ],
+              "first_page_url": "https://sanitriver-backend.ddev.site/api/laporan-sungais/search?search=bay&page=1",
+              "from": 1,
+              "last_page": 1,
+              "last_page_url": "https://sanitriver-backend.ddev.site/api/laporan-sungais/search?search=bay&page=1",
+              "links": [
+                {
+                  "url": null,
+                  "label": "&laquo; Previous",
+                  "page": null,
+                  "active": false
+                },
+                {
+                  "url": "https://sanitriver-backend.ddev.site/api/laporan-sungais/search?search=bay&page=1",
+                  "label": "1",
+                  "page": 1,
+                  "active": true
+                },
+                {
+                  "url": null,
+                  "label": "Next &raquo;",
+                  "page": null,
+                  "active": false
+                }
+              ],
+              "next_page_url": null,
+              "path": "https://sanitriver-backend.ddev.site/api/laporan-sungais/search",
+              "per_page": 10,
+              "prev_page_url": null,
+              "to": 1,
+              "total": 1
+            }
+          }

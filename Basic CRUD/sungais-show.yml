@@ -1,0 +1,91 @@
+info:
+  name: sungais-show
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: https://sanitriver-backend.ddev.site/api/sungais/10
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200-example
+    request:
+      url: https://sanitriver-backend.ddev.site/api/sungais/6
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: cache-control
+          value: no-cache, private
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: date
+          value: Wed, 18 Nov 2026 15:24:58 GMT
+        - name: server
+          value: nginx
+        - name: vary
+          value: Accept-Encoding, Origin
+        - name: transfer-encoding
+          value: chunked
+      body:
+        type: json
+        data: |-
+          {
+            "status": true,
+            "message": "Detail data sungai ditemukan. [Gambar belum tersedia. | Laporan tersedia.]",
+            "data": {
+              "sungai_id": 6,
+              "nama_sungai": "Munduk Tutub Waterfall",
+              "alamat": "Indonesia",
+              "status": "Belum Terlapor",
+              "tipe_sungai": "waterfall",
+              "created_at": "2026-11-12T02:07:16.000000Z",
+              "updated_at": "2026-11-12T02:07:16.000000Z",
+              "gambar_sungais": [],
+              "laporan_sungais": [
+                {
+                  "laporansungai_id": 6,
+                  "user_id": 2,
+                  "sungai_id": 6,
+                  "status": "Cukup Bersih",
+                  "created_at": "2026-11-12T00:37:28.000000Z",
+                  "updated_at": "2026-11-12T00:37:28.000000Z"
+                }
+              ]
+            }
+          }
+  - name: 404-example
+    request:
+      url: https://sanitriver-backend.ddev.site/api/sungais/10000
+      method: GET
+    response:
+      status: 404
+      statusText: Not Found
+      headers:
+        - name: cache-control
+          value: no-cache, private
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: date
+          value: Wed, 18 Nov 2026 15:25:32 GMT
+        - name: server
+          value: nginx
+        - name: vary
+          value: Accept-Encoding, Origin
+        - name: transfer-encoding
+          value: chunked
+      body:
+        type: json
+        data: |-
+          {
+            "status": false,
+            "message": "ID Sungai 10000 tidak ada!"
+          }

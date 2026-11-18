@@ -1,0 +1,10 @@
+info:
+  name: Special Endpoints
+  type: folder
+  seq: 7
+  tags:
+    - Done
+    - Working
+
+request:
+  auth: inherit

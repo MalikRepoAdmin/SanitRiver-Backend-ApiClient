@@ -1,0 +1,18 @@
+info:
+  name: laporan-sungais-delete
+  type: http
+  seq: 7
+
+http:
+  method: DELETE
+  url: https://sanitriver-backend.ddev.site/api/laporan-sungais/6
+  auth:
+    type: bearer
+    token: 6|enJoUFVvwSbtP8rNxKUdMfwi7v80M2Bkv7r8CU5Kac6364be
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

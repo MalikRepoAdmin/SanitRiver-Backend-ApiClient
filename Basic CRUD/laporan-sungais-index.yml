@@ -1,0 +1,646 @@
+info:
+  name: laporan-sungais-index
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: https://sanitriver-backend.ddev.site/api/laporan-sungais
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200-example
+    request:
+      url: https://sanitriver-backend.ddev.site/api/laporan-sungais
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: cache-control
+          value: no-cache, private
+        - name: content-type
+          value: application/json; charset=utf-8
+        - name: date
+          value: Wed, 18 Nov 2026 15:23:08 GMT
+        - name: server
+          value: nginx
+        - name: vary
+          value: Accept-Encoding, Origin
+        - name: transfer-encoding
+          value: chunked
+      body:
+        type: json
+        data: |-
+          {
+            "status": true,
+            "message": "Semua data laporan sungai berhasil dimuat.",
+            "data": [
+              {
+                "laporansungai_id": 1,
+                "user_id": 1,
+                "sungai_id": 1,
+                "status": "Bersih",
+                "created_at": "2026-11-12T01:52:28.000000Z",
+                "updated_at": "2026-11-12T01:52:28.000000Z",
+                "user": {
+                  "user_id": 1,
+                  "username": "budis",
+                  "nama_lengkap": "Budi Santoso",
+                  "bio": "Pengembang perangkat lunak yang berdomisili di Jakarta.",
+                  "email": "budi.santoso@example.com",
+                  "tgl_lahir": "1995-05-15",
+                  "pekerjaan": "Software Engineer",
+                  "domisili": "Jakarta",
+                  "created_at": "2026-11-12T02:07:01.000000Z",
+                  "updated_at": "2026-11-12T02:07:01.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 1,
+                  "nama_sungai": "Dermaga",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "dock",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 2,
+                "user_id": 3,
+                "sungai_id": 2,
+                "status": "Cukup Bersih",
+                "created_at": "2026-11-12T01:37:28.000000Z",
+                "updated_at": "2026-11-12T01:37:28.000000Z",
+                "user": {
+                  "user_id": 3,
+                  "username": "dewil",
+                  "nama_lengkap": "Dewi Lestari",
+                  "bio": "Perancang antarmuka pengguna berbasis di Surabaya.",
+                  "email": "dewi.lestari@example.com",
+                  "tgl_lahir": "1992-12-10",
+                  "pekerjaan": "UI/UX Designer",
+                  "domisili": "Surabaya",
+                  "created_at": "2026-11-12T02:07:02.000000Z",
+                  "updated_at": "2026-11-12T02:07:02.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 2,
+                  "nama_sungai": "Tumimperas",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "waterfall",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 3,
+                "user_id": 2,
+                "sungai_id": 3,
+                "status": "Kurang Bersih",
+                "created_at": "2026-11-12T01:22:28.000000Z",
+                "updated_at": "2026-11-12T01:22:28.000000Z",
+                "user": {
+                  "user_id": 2,
+                  "username": "sitia",
+                  "nama_lengkap": "Siti Aminah",
+                  "bio": "Spesialis pemasaran digital dan pembuat konten.",
+                  "email": "siti.aminah@example.com",
+                  "tgl_lahir": "1998-08-20",
+                  "pekerjaan": "Digital Marketer",
+                  "domisili": "Bandung",
+                  "created_at": "2026-11-12T02:07:01.000000Z",
+                  "updated_at": "2026-11-12T02:07:01.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 3,
+                  "nama_sungai": "Curug Ateks",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "waterfall",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 4,
+                "user_id": 1,
+                "sungai_id": 4,
+                "status": "Tercemar",
+                "created_at": "2026-11-12T01:07:28.000000Z",
+                "updated_at": "2026-11-12T01:07:28.000000Z",
+                "user": {
+                  "user_id": 1,
+                  "username": "budis",
+                  "nama_lengkap": "Budi Santoso",
+                  "bio": "Pengembang perangkat lunak yang berdomisili di Jakarta.",
+                  "email": "budi.santoso@example.com",
+                  "tgl_lahir": "1995-05-15",
+                  "pekerjaan": "Software Engineer",
+                  "domisili": "Jakarta",
+                  "created_at": "2026-11-12T02:07:01.000000Z",
+                  "updated_at": "2026-11-12T02:07:01.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 4,
+                  "nama_sungai": "Dam",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "dam",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 5,
+                "user_id": 3,
+                "sungai_id": 5,
+                "status": "Bersih",
+                "created_at": "2026-11-12T00:52:28.000000Z",
+                "updated_at": "2026-11-12T00:52:28.000000Z",
+                "user": {
+                  "user_id": 3,
+                  "username": "dewil",
+                  "nama_lengkap": "Dewi Lestari",
+                  "bio": "Perancang antarmuka pengguna berbasis di Surabaya.",
+                  "email": "dewi.lestari@example.com",
+                  "tgl_lahir": "1992-12-10",
+                  "pekerjaan": "UI/UX Designer",
+                  "domisili": "Surabaya",
+                  "created_at": "2026-11-12T02:07:02.000000Z",
+                  "updated_at": "2026-11-12T02:07:02.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 5,
+                  "nama_sungai": "Area Persawahan Desa Rante Angin",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": null,
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 6,
+                "user_id": 2,
+                "sungai_id": 6,
+                "status": "Cukup Bersih",
+                "created_at": "2026-11-12T00:37:28.000000Z",
+                "updated_at": "2026-11-12T00:37:28.000000Z",
+                "user": {
+                  "user_id": 2,
+                  "username": "sitia",
+                  "nama_lengkap": "Siti Aminah",
+                  "bio": "Spesialis pemasaran digital dan pembuat konten.",
+                  "email": "siti.aminah@example.com",
+                  "tgl_lahir": "1998-08-20",
+                  "pekerjaan": "Digital Marketer",
+                  "domisili": "Bandung",
+                  "created_at": "2026-11-12T02:07:01.000000Z",
+                  "updated_at": "2026-11-12T02:07:01.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 6,
+                  "nama_sungai": "Munduk Tutub Waterfall",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "waterfall",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 7,
+                "user_id": 1,
+                "sungai_id": 7,
+                "status": "Tercemar",
+                "created_at": "2026-11-12T00:22:28.000000Z",
+                "updated_at": "2026-11-12T00:22:28.000000Z",
+                "user": {
+                  "user_id": 1,
+                  "username": "budis",
+                  "nama_lengkap": "Budi Santoso",
+                  "bio": "Pengembang perangkat lunak yang berdomisili di Jakarta.",
+                  "email": "budi.santoso@example.com",
+                  "tgl_lahir": "1995-05-15",
+                  "pekerjaan": "Software Engineer",
+                  "domisili": "Jakarta",
+                  "created_at": "2026-11-12T02:07:01.000000Z",
+                  "updated_at": "2026-11-12T02:07:01.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 7,
+                  "nama_sungai": "Small",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "waterfall",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 8,
+                "user_id": 3,
+                "sungai_id": 8,
+                "status": "Kurang Bersih",
+                "created_at": "2026-11-12T00:07:28.000000Z",
+                "updated_at": "2026-11-12T00:07:28.000000Z",
+                "user": {
+                  "user_id": 3,
+                  "username": "dewil",
+                  "nama_lengkap": "Dewi Lestari",
+                  "bio": "Perancang antarmuka pengguna berbasis di Surabaya.",
+                  "email": "dewi.lestari@example.com",
+                  "tgl_lahir": "1992-12-10",
+                  "pekerjaan": "UI/UX Designer",
+                  "domisili": "Surabaya",
+                  "created_at": "2026-11-12T02:07:02.000000Z",
+                  "updated_at": "2026-11-12T02:07:02.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 8,
+                  "nama_sungai": "Munduk / Red Coral",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "waterfall",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 9,
+                "user_id": 2,
+                "sungai_id": 9,
+                "status": "Bersih",
+                "created_at": "2026-11-11T23:52:28.000000Z",
+                "updated_at": "2026-11-11T23:52:28.000000Z",
+                "user": {
+                  "user_id": 2,
+                  "username": "sitia",
+                  "nama_lengkap": "Siti Aminah",
+                  "bio": "Spesialis pemasaran digital dan pembuat konten.",
+                  "email": "siti.aminah@example.com",
+                  "tgl_lahir": "1998-08-20",
+                  "pekerjaan": "Digital Marketer",
+                  "domisili": "Bandung",
+                  "created_at": "2026-11-12T02:07:01.000000Z",
+                  "updated_at": "2026-11-12T02:07:01.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 9,
+                  "nama_sungai": "Bendungan Mbah Reso",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "lock_gate",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 10,
+                "user_id": 1,
+                "sungai_id": 10,
+                "status": "Cukup Bersih",
+                "created_at": "2026-11-11T23:37:28.000000Z",
+                "updated_at": "2026-11-11T23:37:28.000000Z",
+                "user": {
+                  "user_id": 1,
+                  "username": "budis",
+                  "nama_lengkap": "Budi Santoso",
+                  "bio": "Pengembang perangkat lunak yang berdomisili di Jakarta.",
+                  "email": "budi.santoso@example.com",
+                  "tgl_lahir": "1995-05-15",
+                  "pekerjaan": "Software Engineer",
+                  "domisili": "Jakarta",
+                  "created_at": "2026-11-12T02:07:01.000000Z",
+                  "updated_at": "2026-11-12T02:07:01.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 10,
+                  "nama_sungai": "Bendung Ngluweng",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "weir",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 11,
+                "user_id": 3,
+                "sungai_id": 11,
+                "status": "Tercemar",
+                "created_at": "2026-11-11T23:22:28.000000Z",
+                "updated_at": "2026-11-11T23:22:28.000000Z",
+                "user": {
+                  "user_id": 3,
+                  "username": "dewil",
+                  "nama_lengkap": "Dewi Lestari",
+                  "bio": "Perancang antarmuka pengguna berbasis di Surabaya.",
+                  "email": "dewi.lestari@example.com",
+                  "tgl_lahir": "1992-12-10",
+                  "pekerjaan": "UI/UX Designer",
+                  "domisili": "Surabaya",
+                  "created_at": "2026-11-12T02:07:02.000000Z",
+                  "updated_at": "2026-11-12T02:07:02.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 11,
+                  "nama_sungai": "Dam Balongsono",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "weir",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 12,
+                "user_id": 2,
+                "sungai_id": 12,
+                "status": "Kurang Bersih",
+                "created_at": "2026-11-11T23:07:28.000000Z",
+                "updated_at": "2026-11-11T23:07:28.000000Z",
+                "user": {
+                  "user_id": 2,
+                  "username": "sitia",
+                  "nama_lengkap": "Siti Aminah",
+                  "bio": "Spesialis pemasaran digital dan pembuat konten.",
+                  "email": "siti.aminah@example.com",
+                  "tgl_lahir": "1998-08-20",
+                  "pekerjaan": "Digital Marketer",
+                  "domisili": "Bandung",
+                  "created_at": "2026-11-12T02:07:01.000000Z",
+                  "updated_at": "2026-11-12T02:07:01.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 12,
+                  "nama_sungai": "Dam Karet Menturus",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "weir",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 13,
+                "user_id": 1,
+                "sungai_id": 13,
+                "status": "Bersih",
+                "created_at": "2026-11-11T22:52:28.000000Z",
+                "updated_at": "2026-11-11T22:52:28.000000Z",
+                "user": {
+                  "user_id": 1,
+                  "username": "budis",
+                  "nama_lengkap": "Budi Santoso",
+                  "bio": "Pengembang perangkat lunak yang berdomisili di Jakarta.",
+                  "email": "budi.santoso@example.com",
+                  "tgl_lahir": "1995-05-15",
+                  "pekerjaan": "Software Engineer",
+                  "domisili": "Jakarta",
+                  "created_at": "2026-11-12T02:07:01.000000Z",
+                  "updated_at": "2026-11-12T02:07:01.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 13,
+                  "nama_sungai": "Cek Dam Cianten",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "weir",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 14,
+                "user_id": 3,
+                "sungai_id": 14,
+                "status": "Cukup Bersih",
+                "created_at": "2026-11-11T22:37:28.000000Z",
+                "updated_at": "2026-11-11T22:37:28.000000Z",
+                "user": {
+                  "user_id": 3,
+                  "username": "dewil",
+                  "nama_lengkap": "Dewi Lestari",
+                  "bio": "Perancang antarmuka pengguna berbasis di Surabaya.",
+                  "email": "dewi.lestari@example.com",
+                  "tgl_lahir": "1992-12-10",
+                  "pekerjaan": "UI/UX Designer",
+                  "domisili": "Surabaya",
+                  "created_at": "2026-11-12T02:07:02.000000Z",
+                  "updated_at": "2026-11-12T02:07:02.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 14,
+                  "nama_sungai": "Dam Kuncir",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "weir",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 15,
+                "user_id": 2,
+                "sungai_id": 15,
+                "status": "Tercemar",
+                "created_at": "2026-11-11T22:22:28.000000Z",
+                "updated_at": "2026-11-11T22:22:28.000000Z",
+                "user": {
+                  "user_id": 2,
+                  "username": "sitia",
+                  "nama_lengkap": "Siti Aminah",
+                  "bio": "Spesialis pemasaran digital dan pembuat konten.",
+                  "email": "siti.aminah@example.com",
+                  "tgl_lahir": "1998-08-20",
+                  "pekerjaan": "Digital Marketer",
+                  "domisili": "Bandung",
+                  "created_at": "2026-11-12T02:07:01.000000Z",
+                  "updated_at": "2026-11-12T02:07:01.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 15,
+                  "nama_sungai": "Dam Tanjung",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "weir",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 16,
+                "user_id": 1,
+                "sungai_id": 16,
+                "status": "Kurang Bersih",
+                "created_at": "2026-11-11T22:07:28.000000Z",
+                "updated_at": "2026-11-11T22:07:28.000000Z",
+                "user": {
+                  "user_id": 1,
+                  "username": "budis",
+                  "nama_lengkap": "Budi Santoso",
+                  "bio": "Pengembang perangkat lunak yang berdomisili di Jakarta.",
+                  "email": "budi.santoso@example.com",
+                  "tgl_lahir": "1995-05-15",
+                  "pekerjaan": "Software Engineer",
+                  "domisili": "Jakarta",
+                  "created_at": "2026-11-12T02:07:01.000000Z",
+                  "updated_at": "2026-11-12T02:07:01.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 16,
+                  "nama_sungai": "Bendung Ngluweng",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "weir",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 17,
+                "user_id": 3,
+                "sungai_id": 17,
+                "status": "Bersih",
+                "created_at": "2026-11-11T21:52:28.000000Z",
+                "updated_at": "2026-11-11T21:52:28.000000Z",
+                "user": {
+                  "user_id": 3,
+                  "username": "dewil",
+                  "nama_lengkap": "Dewi Lestari",
+                  "bio": "Perancang antarmuka pengguna berbasis di Surabaya.",
+                  "email": "dewi.lestari@example.com",
+                  "tgl_lahir": "1992-12-10",
+                  "pekerjaan": "UI/UX Designer",
+                  "domisili": "Surabaya",
+                  "created_at": "2026-11-12T02:07:02.000000Z",
+                  "updated_at": "2026-11-12T02:07:02.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 17,
+                  "nama_sungai": "Dam Sewu",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "weir",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 18,
+                "user_id": 2,
+                "sungai_id": 18,
+                "status": "Cukup Bersih",
+                "created_at": "2026-11-11T21:37:28.000000Z",
+                "updated_at": "2026-11-11T21:37:28.000000Z",
+                "user": {
+                  "user_id": 2,
+                  "username": "sitia",
+                  "nama_lengkap": "Siti Aminah",
+                  "bio": "Spesialis pemasaran digital dan pembuat konten.",
+                  "email": "siti.aminah@example.com",
+                  "tgl_lahir": "1998-08-20",
+                  "pekerjaan": "Digital Marketer",
+                  "domisili": "Bandung",
+                  "created_at": "2026-11-12T02:07:01.000000Z",
+                  "updated_at": "2026-11-12T02:07:01.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 18,
+                  "nama_sungai": "Bendung Gerak Sembayat",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "weir",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 19,
+                "user_id": 1,
+                "sungai_id": 19,
+                "status": "Tercemar",
+                "created_at": "2026-11-11T21:22:28.000000Z",
+                "updated_at": "2026-11-11T21:22:28.000000Z",
+                "user": {
+                  "user_id": 1,
+                  "username": "budis",
+                  "nama_lengkap": "Budi Santoso",
+                  "bio": "Pengembang perangkat lunak yang berdomisili di Jakarta.",
+                  "email": "budi.santoso@example.com",
+                  "tgl_lahir": "1995-05-15",
+                  "pekerjaan": "Software Engineer",
+                  "domisili": "Jakarta",
+                  "created_at": "2026-11-12T02:07:01.000000Z",
+                  "updated_at": "2026-11-12T02:07:01.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 19,
+                  "nama_sungai": "Rolak Songo",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "weir",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              },
+              {
+                "laporansungai_id": 20,
+                "user_id": 3,
+                "sungai_id": 20,
+                "status": "Kurang Bersih",
+                "created_at": "2026-11-11T21:07:28.000000Z",
+                "updated_at": "2026-11-11T21:07:28.000000Z",
+                "user": {
+                  "user_id": 3,
+                  "username": "dewil",
+                  "nama_lengkap": "Dewi Lestari",
+                  "bio": "Perancang antarmuka pengguna berbasis di Surabaya.",
+                  "email": "dewi.lestari@example.com",
+                  "tgl_lahir": "1992-12-10",
+                  "pekerjaan": "UI/UX Designer",
+                  "domisili": "Surabaya",
+                  "created_at": "2026-11-12T02:07:02.000000Z",
+                  "updated_at": "2026-11-12T02:07:02.000000Z"
+                },
+                "sungai": {
+                  "sungai_id": 20,
+                  "nama_sungai": "Curug Cipalasari",
+                  "alamat": "Indonesia",
+                  "status": "Belum Terlapor",
+                  "tipe_sungai": "waterfall",
+                  "created_at": "2026-11-12T02:07:16.000000Z",
+                  "updated_at": "2026-11-12T02:07:16.000000Z"
+                },
+                "gambar_sungais": []
+              }
+            ]
+          }

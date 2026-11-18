@@ -1,0 +1,18 @@
+info:
+  name: laporan-sungais-update
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: https://sanitriver-backend.ddev.site/api/laporan-sungais/6
+  auth:
+    type: bearer
+    token: 6|enJoUFVvwSbtP8rNxKUdMfwi7v80M2Bkv7r8CU5Kac6364be
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
